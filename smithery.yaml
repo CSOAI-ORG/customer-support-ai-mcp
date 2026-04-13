@@ -1,0 +1,10 @@
+name: customer-support-ai-mcp
+description: "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/customer-support-ai-mcp
+license: MIT
+categories: [Customer Support, Automation]
+tags: [customer-support, helpdesk, ticket-management, support-automation]
+runtime: python
+entrypoint: server.py

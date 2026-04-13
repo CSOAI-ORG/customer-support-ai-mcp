@@ -1,0 +1,24 @@
+{
+  "name": "customer-support-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://meok.ai",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/customer-support-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "classify_ticket",
+    "draft_response",
+    "analyze_sentiment",
+    "detect_escalation",
+    "generate_faq"
+  ],
+  "categories": [
+    "Customer Support",
+    "Automation"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
