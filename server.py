@@ -13,10 +13,7 @@ from typing import Optional
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
-    "customer-support-ai",
-    version="1.0.0",
-    description="Customer support AI - ticket classification, responses, sentiment, escalation, FAQ",
-)
+    "customer-support-ai")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
@@ -107,8 +104,7 @@ _RESPONSE_TEMPLATES: dict[str, dict] = {
 def classify_ticket(
     subject: str,
     body: str,
-    customer_tier: str = "standard",
-) -> dict:
+    customer_tier: str = "standard") -> dict:
     """Classify a support ticket by category, priority, and routing.
 
     Args:
@@ -181,8 +177,7 @@ def draft_response(
     customer_name: str = "there",
     issue_summary: str = "",
     tone: str = "professional",
-    include_steps: bool = True,
-) -> dict:
+    include_steps: bool = True) -> dict:
     """Draft a customer support response based on ticket category.
 
     Args:
@@ -234,8 +229,7 @@ def draft_response(
 
 @mcp.tool()
 def analyze_sentiment(
-    messages: list[str],
-) -> dict:
+    messages: list[str]) -> dict:
     """Analyze customer message sentiment to gauge satisfaction.
 
     Args:
@@ -312,8 +306,7 @@ def detect_escalation(
     messages: list[str],
     ticket_age_hours: float = 0,
     response_count: int = 0,
-    customer_tier: str = "standard",
-) -> dict:
+    customer_tier: str = "standard") -> dict:
     """Detect if a support ticket needs escalation to management.
 
     Args:
@@ -389,8 +382,7 @@ def detect_escalation(
 @mcp.tool()
 def generate_faq(
     tickets: list[dict],
-    max_faqs: int = 10,
-) -> dict:
+    max_faqs: int = 10) -> dict:
     """Generate FAQ entries from common support ticket patterns.
 
     Args:
