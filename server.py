@@ -6,6 +6,11 @@ Ticket classification, response drafting, sentiment analysis,
 escalation detection, and FAQ generation.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 from datetime import datetime, timezone
 from typing import Optional
@@ -104,7 +109,7 @@ _RESPONSE_TEMPLATES: dict[str, dict] = {
 def classify_ticket(
     subject: str,
     body: str,
-    customer_tier: str = "standard") -> dict:
+    customer_tier: str = "standard", api_key: str = "") -> dict:
     """Classify a support ticket by category, priority, and routing.
 
     Args:
@@ -112,6 +117,10 @@ def classify_ticket(
         body: Full ticket body text.
         customer_tier: standard | premium | enterprise.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -177,7 +186,7 @@ def draft_response(
     customer_name: str = "there",
     issue_summary: str = "",
     tone: str = "professional",
-    include_steps: bool = True) -> dict:
+    include_steps: bool = True, api_key: str = "") -> dict:
     """Draft a customer support response based on ticket category.
 
     Args:
@@ -187,6 +196,10 @@ def draft_response(
         tone: professional | friendly | formal | empathetic.
         include_steps: Whether to include resolution steps.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -229,12 +242,16 @@ def draft_response(
 
 @mcp.tool()
 def analyze_sentiment(
-    messages: list[str]) -> dict:
+    messages: list[str], api_key: str = "") -> dict:
     """Analyze customer message sentiment to gauge satisfaction.
 
     Args:
         messages: List of customer message texts (conversation thread).
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -306,7 +323,7 @@ def detect_escalation(
     messages: list[str],
     ticket_age_hours: float = 0,
     response_count: int = 0,
-    customer_tier: str = "standard") -> dict:
+    customer_tier: str = "standard", api_key: str = "") -> dict:
     """Detect if a support ticket needs escalation to management.
 
     Args:
@@ -315,6 +332,10 @@ def detect_escalation(
         response_count: Number of agent responses so far.
         customer_tier: standard | premium | enterprise.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -382,13 +403,17 @@ def detect_escalation(
 @mcp.tool()
 def generate_faq(
     tickets: list[dict],
-    max_faqs: int = 10) -> dict:
+    max_faqs: int = 10, api_key: str = "") -> dict:
     """Generate FAQ entries from common support ticket patterns.
 
     Args:
         tickets: List of resolved tickets with keys: subject, category, resolution.
         max_faqs: Maximum number of FAQ entries to generate (1-20).
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 

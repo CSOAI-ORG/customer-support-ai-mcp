@@ -1,24 +1,122 @@
 {
   "name": "customer-support-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://meok.ai",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/customer-support-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**Support Automation Intelligence**",
+  "version": "1.0.0",
   "tools": [
-    "classify_ticket",
-    "draft_response",
-    "analyze_sentiment",
-    "detect_escalation",
-    "generate_faq"
-  ],
-  "categories": [
-    "Customer Support",
-    "Automation"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "classify_ticket",
+      "description": "Classify a support ticket by category, priority, and routing.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "customer_tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "subject",
+          "body"
+        ]
+      }
+    },
+    {
+      "name": "draft_response",
+      "description": "Draft a customer support response based on ticket category.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "customer_name": {
+            "type": "string"
+          },
+          "issue_summary": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string"
+          },
+          "include_steps": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "category"
+        ]
+      }
+    },
+    {
+      "name": "analyze_sentiment",
+      "description": "Analyze customer message sentiment to gauge satisfaction.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "messages"
+        ]
+      }
+    },
+    {
+      "name": "detect_escalation",
+      "description": "Detect if a support ticket needs escalation to management.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ticket_age_hours": {
+            "type": "number"
+          },
+          "response_count": {
+            "type": "integer"
+          },
+          "customer_tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "messages"
+        ]
+      }
+    },
+    {
+      "name": "generate_faq",
+      "description": "Generate FAQ entries from common support ticket patterns.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "tickets": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "max_faqs": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "tickets"
+        ]
+      }
+    }
+  ]
 }
