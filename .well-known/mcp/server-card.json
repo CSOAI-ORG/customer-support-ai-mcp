@@ -1,0 +1,56 @@
+{
+  "name": "customer-support-ai",
+  "description": "\u0001",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/customer-support-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "classify_ticket",
+      "description": "Classify a support ticket by category, priority, and routing."
+    },
+    {
+      "name": "draft_response",
+      "description": "Draft a customer support response based on ticket category."
+    },
+    {
+      "name": "analyze_sentiment",
+      "description": "Analyze customer message sentiment to gauge satisfaction."
+    },
+    {
+      "name": "detect_escalation",
+      "description": "Detect if a support ticket needs escalation to management."
+    },
+    {
+      "name": "generate_faq",
+      "description": "Generate FAQ entries from common support ticket patterns."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
