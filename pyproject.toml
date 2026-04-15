@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/customer-support-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+customer_support_ai_mcp = "server:main"
