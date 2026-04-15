@@ -1,5 +1,6 @@
 name: customer-support-ai-mcp
-description: "\x01"
+description: Customer Support Ai automation via MCP. Includes classify ticket, draft
+  response, analyze sentiment. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: classify_ticket
