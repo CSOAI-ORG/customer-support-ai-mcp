@@ -1,5 +1,5 @@
 name: customer-support-ai-mcp
-description: MEOK AI Labs MCP Server
+description: "\x01"
 version: 1.0.0
 tools:
 - name: classify_ticket
