@@ -1,6 +1,6 @@
 {
   "name": "customer-support-ai-mcp",
-  "description": "**Support Automation Intelligence**",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
   "version": "1.0.0",
   "tools": [
     {
@@ -59,10 +59,7 @@
         "type": "object",
         "properties": {
           "messages": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           }
         },
         "required": [
@@ -77,10 +74,7 @@
         "type": "object",
         "properties": {
           "messages": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           },
           "ticket_age_hours": {
             "type": "number"
@@ -104,10 +98,7 @@
         "type": "object",
         "properties": {
           "tickets": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "max_faqs": {
             "type": "integer"

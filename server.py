@@ -17,8 +17,7 @@ from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP(
-    "customer-support-ai")
+mcp = FastMCP("customer-support-ai", instructions="")
 
 # ---------------------------------------------------------------------------
 # Rate limiting

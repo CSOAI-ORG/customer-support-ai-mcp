@@ -1,5 +1,5 @@
 name: customer-support-ai-mcp
-description: '**Support Automation Intelligence**'
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: classify_ticket
