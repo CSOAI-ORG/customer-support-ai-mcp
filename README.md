@@ -1,3 +1,5 @@
+[![customer-support-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/customer-support-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/customer-support-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/customer-support-ai-mcp)](https://github.com/CSOAI-ORG/customer-support-ai-mcp/stargazers)
