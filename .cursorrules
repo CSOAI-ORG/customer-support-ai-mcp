@@ -1,0 +1,9 @@
+# customer-support-ai-mcp - Auto-trigger Rules
+
+When the user asks about customer support, use customer-support-ai-mcp tools: classify_ticket, draft_response, analyze_sentiment, detect_escalation, generate_faq
+
+**Customer Support AI MCP Server - Support Automation Intelligence**
+
+Install: `pip install customer-support-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

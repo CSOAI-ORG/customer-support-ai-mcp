@@ -1,0 +1,28 @@
+{
+  "name": "customer-support-ai-mcp",
+  "title": "Customer Support Ai Mcp",
+  "description": "Customer Support Ai automation via MCP. Includes classify ticket, draft response, analyze sentiment. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "classify_ticket"
+    },
+    {
+      "name": "draft_response"
+    },
+    {
+      "name": "analyze_sentiment"
+    },
+    {
+      "name": "detect_escalation"
+    },
+    {
+      "name": "generate_faq"
+    }
+  ]
+}

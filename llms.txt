@@ -1,32 +1,36 @@
-# Customer Support Ai MCP
-
-> MEOK AI Labs — customer-support-ai-mcp MCP Server
-
-`customer-support-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# customer-support-ai-mcp
+# **Customer Support AI MCP Server - Support Automation Intelligence**
 
 ## Install
-
 ```bash
 pip install customer-support-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx customer-support-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `classify_ticket` — Classify a support ticket by category, priority, and routing.
-- `draft_response` — Draft a customer support response based on ticket category.
-- `analyze_sentiment` — Analyze customer message sentiment to gauge satisfaction.
-- `detect_escalation` — Detect if a support ticket needs escalation to management.
-- `generate_faq` — Generate FAQ entries from common support ticket patterns.
+### `classify_ticket`
+Classify a support ticket by category, priority, and routing.
 
-## Links
+### `draft_response`
+Draft a customer support response based on ticket category.
 
-- Source: https://github.com/CSOAI-ORG/customer-support-ai-mcp
-- PyPI: https://pypi.org/project/customer-support-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `analyze_sentiment`
+Analyze customer message sentiment to gauge satisfaction.
+
+### `detect_escalation`
+Detect if a support ticket needs escalation to management.
+
+### `generate_faq`
+Generate FAQ entries from common support ticket patterns.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
