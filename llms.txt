@@ -1,0 +1,32 @@
+# Customer Support Ai MCP
+
+> MEOK AI Labs — customer-support-ai-mcp MCP Server
+
+`customer-support-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install customer-support-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx customer-support-ai-mcp
+```
+
+## Tools
+
+- `classify_ticket` — Classify a support ticket by category, priority, and routing.
+- `draft_response` — Draft a customer support response based on ticket category.
+- `analyze_sentiment` — Analyze customer message sentiment to gauge satisfaction.
+- `detect_escalation` — Detect if a support ticket needs escalation to management.
+- `generate_faq` — Generate FAQ entries from common support ticket patterns.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/customer-support-ai-mcp
+- PyPI: https://pypi.org/project/customer-support-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
