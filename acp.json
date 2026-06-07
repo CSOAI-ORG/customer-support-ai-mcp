@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "customer-support-ai-mcp",
+    "description": "Customer Support Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "customer-support-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "classify_ticket",
+      "draft_response",
+      "analyze_sentiment",
+      "detect_escalation",
+      "generate_faq"
+    ]
+  }
+}

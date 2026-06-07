@@ -1,0 +1,68 @@
+{
+  "name": "customer-support-ai-mcp",
+  "description": "Customer Support Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/customer-support-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "classify_ticket",
+      "name": "Classify Ticket",
+      "description": "classify_ticket via customer-support-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "draft_response",
+      "name": "Draft Response",
+      "description": "draft_response via customer-support-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_sentiment",
+      "name": "Analyze Sentiment",
+      "description": "analyze_sentiment via customer-support-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "detect_escalation",
+      "name": "Detect Escalation",
+      "description": "detect_escalation via customer-support-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_faq",
+      "name": "Generate Faq",
+      "description": "generate_faq via customer-support-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
